@@ -1,0 +1,199 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+	display: block;
+	border:none;
+	background: transparent;
+}
+
+ul, li {
+	display: block;
+	margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #190C05;
+}
+
+
+header {
+    height: 830px;
+    background: url("../img/Background.png") no-repeat center center;
+    background-size: 100% 100%;
+}
+
+nav {
+    padding-top: 30px;
+}
+
+.be-relative {
+    position: relative;
+}
+
+.nav-item {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btn-classic {
+    background: linear-gradient(180deg, #F6762C 0%, #C65311 100%);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    width: 121px;
+    height: 54px;
+}
+
+.title {
+    font-size: 49px;
+    font-weight: 700;
+    line-height: 1.3em;
+    color: #593b2c;
+    margin-bottom: 40px;
+}
+
+.hero {
+    margin-top: 150px;
+}
+
+.pre-title {
+    color: #F6762C;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.pre-title-after::after {
+    display: block;
+    content: "";
+    width:45px;
+    border-bottom: 1px solid #F6762C;
+    /* background: #F6762C; */
+    position: absolute;
+    top: 90%;
+    right: 60%;
+}
+
+.after-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #593b2c;
+}
+
+.btn-m {
+    margin-top: 40px;
+}
+
+.btn-black {
+    background: linear-gradient(180deg, #190C05 0%, rgba(25, 12, 5, 0.79) 100%); 
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    width: 121px;
+    height: 54px;
+}
+
+.about {
+    margin-top: 110px;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.features {
+    margin-top: 110px;
+}
+
+.item-section {
+    margin-top: 60px;
+}
+
+.adv {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.adv-text {
+    font-size: 16px;
+    color: #593b2c;
+}
+
+.download {
+    margin-top: 150px;
+}
+
+.donwload-item {
+    margin-right: 30px;
+}
+
+.donwload-btn {
+    margin-top: 80px;
+}
+
+.donwload-item:hover {
+    opacity:0.8;
+    transition: 0.5s all ease;
+}
+
+.recipes {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.recipes-section {
+    margin-top: 70px;
+}
+
+.rec {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.rec-text {
+    font-size: 16px;
+    color: #593b2c;
+    margin-bottom: 50px;
+    padding: 0 30px 0 30px;
+}
+
+.rec-btn {
+    margin-top: 50px;
+}
+
+.bordered-box {
+    position: absolute;
+    width: 90%;
+    height: 300px;
+    border: 1px solid #F6762C;
+    border-radius: 25px;
+    background: transparent;
+    top: 79px;
+    right: 50%;                         
+    transform: translate(50%, 0);
+    z-index: -1;
+}
+
+.img-container::after {
+    content:"$9.40";
+    font-size: 12px;
+    font-weight: 600;
+    color:#fff;
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    border: 2px solid #fff;
+    border-radius: 100px;
+    left:50%;
+    bottom: -20px;
+    background: #000;
+    padding-top: 18px;
+}

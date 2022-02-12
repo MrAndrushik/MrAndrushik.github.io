@@ -1,0 +1,151 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"); */
+
+/* @font-face {
+    font-family: "SF Pro Text";
+    font-display: swap;
+    src: url("../fonts/SF-Pro-Text-Bold.woff2") format("woff2"),
+        url("../fonts/SF-Pro-Text-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    font-display: swap;
+    src: url("../fonts/SF-Pro-Text-Regular.woff2") format("woff2"),
+        url("../fonts/SF-Pro-Text-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    font-display: swap;
+    src: url("../fonts/SF-Pro-Text-Heavy.woff2") format("woff2"),
+        url("../fonts/SF-Pro-Text-Heavy.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: "SF";
+    font-display: swap;
+    src: url("../fonts/SF-Pro-Text-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF";
+    font-display: swap;
+    src: url("../fonts/SF-Pro-Text-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF";
+    font-display: swap;
+    src: url("../fonts/SF-Pro-Text-Heavy.otf") format("opentype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+:root {
+    --gradient: linear-gradient(
+        90deg,
+        rgba(231, 153, 226, 1) 0%,
+        rgba(252, 189, 153, 1) 100%
+    );
+}
+
+body {
+    background: #24262e;
+    font-family: "SF";
+    /* font-family: "Roboto", sans-serif; */
+    font-weight: 400;
+    color: #ffffff;
+}
+
+img {
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.gradient {
+    background-color: #fff;
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container {
+    max-width: 510px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.box {
+    border: 1px solid #3a3f44;
+    border-radius: 8px;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+.small-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: -0.384px;
+    color: #ffffff;
+}
+
+.big-text {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 131.5%;
+    letter-spacing: -0.384px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.be-relative {
+    position: relative;
+}

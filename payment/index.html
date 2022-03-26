@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&_v=20220326100247"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/select.min.css?_v=20220326100247">
+    <link rel="stylesheet" href="css/normilize.min.css?_v=20220326100247" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20220326100247" />
+    <title>Main</title>
+</head>
+
+<body>
+    <header class="header">
+    <div class="header__container">
+        <a href="/"><img src="img/logo.svg" alt="" class="header__logo"></a>
+        <div class="header__profile">
+            <div class="header__icon">
+                <picture><source srcset="img/microchel.webp" type="image/webp"><img src="img/microchel.png" alt="" class="header__icon-img"></picture>
+            </div>
+            <button class="header__btn">Выйти из аккаунта</button>
+        </div>
+    </div>
+</header>
+    <aside class="sidebar">
+        <div class="sidebar__wrapper">
+            <div class="sidebar__item">
+                <img class="sidebar__img" src="img/Alian.svg" alt="alian">
+                <p class="sidebar__caption">Главная</p>
+            </div>
+            <div class="sidebar__item">
+                <img class="sidebar__img" src="img/result.svg" alt="alian">
+                <p class="sidebar__caption">Ваши результаты</p>
+            </div>
+            <div class="sidebar__item">
+                <img class="sidebar__img" src="img/payment.svg" alt="alian">
+                <p class="sidebar__caption">Оплата</p>
+            </div>
+        </div>
+        <p class="aside__notice">Разработка сайта - комапния “Sitetopic”</p>
+    </aside>
+    <main class="main">
+        <section class="payment">
+            <div class="container payment__container">
+                <div class="payment__balance-block">
+                    <p class="payment__descr">Средств на балансе:</p>
+                    <h2 class="payment__balance">4 000 ₽</h2>
+                </div>
+                <div class="payment__periods-block">
+                    <p class="payment__periods-descr">Период пополнения (месяц)</p>
+                    <div class="select" id="select-1">
+
+                        <button type="button" class="select__toggle" name="car" value="" data-select="toggle"
+                            data-index="-1">Выберите</button>
+
+                        <div class="select__dropdown">
+                            <ul class="select__options">
+                                <li class="select__option" data-select="option" data-value="3" data-index="0">
+                                    3</li>
+                                <li class="select__option" data-select="option" data-value="2" data-index="1">2
+                                </li>
+                                <li class="select__option" data-select="option" data-value="1" data-index="2">
+                                    1</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="payments__btn stn-btn">Сформировать</button>
+                </div>
+            </div>
+        </section>
+        <section class="requisites">
+            <div class="container requisites__container">
+                <h2 class="requisites__title">Реквизиты для оплаты</h2>
+                <div class="requisites__wrapper">
+                    <div class="requisites__content">
+                        <ul class="requisites__list">
+                            <li class="requisites__item">Получатель: Публичное акционерное общество “Мобильные
+                                ТелеСистемы”
+                            </li>
+                            <li class="requisites__item">ИНН/КПП 7740000076/997750001</li>
+                            <li class="requisites__item">Банк получателя: ПАО “МТС-Банк”</li>
+                            <li class="requisites__item">Кор. счет: 30101810600000000232, БИК: 044525232</li>
+                            <li class="requisites__item">Расчётный счёт: 40702810300000050072</li>
+                            <li class="requisites__item">Назначение платежа: Оплата долга по лицевому счету 299740729618
+                            </li>
+                            <li class="requisites__item requisites__item_total">Сумма к оплате: 99 999 рублей</li>
+                        </ul>
+                        <div class="requisites__btn-block">
+                            <button class="stn-btn requisites__btn">Скачать платежное поручение</button>
+                            <a href="#" class="requisites__link">Скачать договор</a>
+                        </div>
+                    </div>
+                    <img src="img/qr.svg" alt="qr" class="requisites__qr">
+                </div>
+            </div>
+        </section>
+    </main>
+    <button class="mobile__btn">></button>
+    <footer class="footer">
+    <div class="container"></div>
+</footer>
+    <script src="js/app.min.js?_v=20220326100247"></script>
+</body>
+
+</html>

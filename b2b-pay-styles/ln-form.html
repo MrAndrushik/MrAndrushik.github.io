@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/ln.css">
+    <title>SwiftPay Form</title>
+</head>
+
+<body class="ln-body ln-body--gray">
+    <div class="ln-overlay">
+        <div class="ln-overlay__payment ln-payment">
+            <button class="ln-overlay__close"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5 4.5L4.5 13.5" stroke="#B0B7C3" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M4.5 4.5L13.5 13.5" stroke="#B0B7C3" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <p class="ln-payment__title">Ссылка для оплаты</p>
+            <ul class="ln-payment__list">
+                <li class="ln-payment__item">Скопируйте ссылку и отправьте её в бухгалтерию удобным способом
+                </li>
+                <li class="ln-payment__item">После отправки платежа ожидайте подтверждения оплаты в данном окне
+                </li>
+            </ul>
+            <div class="ln-payment__link">https://sbi.sberbank.ru:9443/ic/dcb/?#/?_k=071nwb</div>
+            <div class="ln-payment__bottom">
+                <ul class="ln-payment__contacts">
+                    <li class="ln-payment__social">
+                        <a href="#" class="ln-payment__social">
+                            <img src="./assets/img/vk.svg" alt="vk">
+                            <span>ВКонтакте</span>
+                        </a>
+                    </li>
+                    <li class="ln-payment__social">
+                        <a href="#" class="ln-payment__social">
+                            <img src="./assets/img/telegram.svg" alt="telegram">
+                            <span>Telegram</span>
+                        </a>
+                    </li>
+                    <li class="ln-payment__social">
+                        <a href="#" class="ln-payment__social">
+                            <img src="./assets/img/whatsapp.svg" alt="whatsapp">
+                            <span>WhatsApp</span>
+                        </a>
+                    </li>
+                    <li class="ln-payment__social">
+                        <a href="#" class="ln-payment__social">
+                            <img src="./assets/img/mail.svg" alt="mail">
+                            <span>Эл. почта</span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="ln-btn ln-payment__copy">Скопировать ссылку</button>
+            </div>
+        </div>
+    </div>
+    <form class="ln-form">
+        <img class="ln-form__logo" src="./assets/img/logo-black.svg" alt="SwiftPay">
+        <h3 class="ln-form__title">Счет на оплату № 2 от 20 сентября 2022 г.</h3>
+        <div class="ln-form__wrapper">
+            <div class="ln-form__row">
+                <div class="ln-form__block">
+                    <label class="ln-form__label" for="company">Введите название компании или ИНН</label>
+                    <div class="ln-form__company">
+                        <input class="ln-form__input" id="company" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="ln-form__row ln-form__row--preborder">
+                <div class="ln-form__block">
+                    <label class="ln-form__label" for="checkingAccount">Введите расчетный счет</label>
+                    <input class="ln-form__input" id="checkingAccount" type="text">
+                </div>
+                <div class="ln-form__block">
+                    <label class="ln-form__label" for="bic">БИК</label>
+                    <div class="ln-bic">
+                        <input class="ln-form__input ln-bic__input" id="bic" type="text">
+                        <img class="ln-bic__logo" src="./assets/img/input-vtb.svg" alt="company-logo">
+                    </div>
+                </div>
+            </div>
+            <div class="ln-form__row ln-form__row--border">
+                <div class="ln-form__block">
+                    <p class="ln-form__label">Способ получения закрывающих документов</p>
+                    <div class="ln-form__flex">
+                        <label class="ln-form__receiving ln-receiving" for="ln-edo">
+                            <div class="ln-receiving__block">
+                                <img src="./assets/img/edo.svg" alt="edo">
+                                <span class="ln-receiving__text">Эдо</span>
+                            </div>
+                            <input type="radio" id="ln-edo" name="receiving" value="edo">
+                            <span class="ln-receiving__checkmark">
+                                <svg width="16" height="16" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.617 0.666992C15.442 0.666992 17.3332 2.65012 17.3332 5.60012V12.4095C17.3332 15.3501 15.442 17.3332 12.617 17.3332H5.39199C2.56699 17.3332 0.666992 15.3501 0.666992 12.4095V5.60012C0.666992 2.65012 2.56699 0.666992 5.39199 0.666992H12.617ZM12.4832 6.50012C12.3457 6.36405 12.1601 6.28773 11.9667 6.28773C11.7732 6.28773 11.5876 6.36405 11.4501 6.50012L8.00824 9.94199L6.55012 8.48324C6.26699 8.20012 5.80012 8.20012 5.51699 8.48324C5.23387 8.76637 5.23324 9.22512 5.51699 9.51699L7.50012 11.492C7.64199 11.6332 7.82512 11.7001 8.00824 11.7001C8.20012 11.7001 8.38324 11.6332 8.52512 11.492L12.4832 7.53324C12.6193 7.39575 12.6956 7.21012 12.6956 7.01668C12.6956 6.82324 12.6193 6.63761 12.4832 6.50012Z"
+                                        fill="#0FBE89" />
+                                </svg>
+                            </span>
+                        </label>
+                        <label class="ln-form__receiving ln-receiving" for="ln-pochta">
+                            <div class="ln-receiving__block">
+                                <img src="./assets/img/pochta.svg" alt="pochta">
+                                <span class="ln-receiving__text">Почта</span>
+                            </div>
+                            <input type="radio" id="ln-pochta" name="receiving" value="pochta">
+                            <span class="ln-receiving__checkmark">
+                                <svg width="16" height="16" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.617 0.666992C15.442 0.666992 17.3332 2.65012 17.3332 5.60012V12.4095C17.3332 15.3501 15.442 17.3332 12.617 17.3332H5.39199C2.56699 17.3332 0.666992 15.3501 0.666992 12.4095V5.60012C0.666992 2.65012 2.56699 0.666992 5.39199 0.666992H12.617ZM12.4832 6.50012C12.3457 6.36405 12.1601 6.28773 11.9667 6.28773C11.7732 6.28773 11.5876 6.36405 11.4501 6.50012L8.00824 9.94199L6.55012 8.48324C6.26699 8.20012 5.80012 8.20012 5.51699 8.48324C5.23387 8.76637 5.23324 9.22512 5.51699 9.51699L7.50012 11.492C7.64199 11.6332 7.82512 11.7001 8.00824 11.7001C8.20012 11.7001 8.38324 11.6332 8.52512 11.492L12.4832 7.53324C12.6193 7.39575 12.6956 7.21012 12.6956 7.01668C12.6956 6.82324 12.6193 6.63761 12.4832 6.50012Z"
+                                        fill="#0FBE89" />
+                                </svg>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="ln-form__block">
+                    <p class="ln-form__label">Выберите оператора</p>
+                    <div class="ln-form__operator ln-operator">
+                        <button id="ln-operators-btn" class="ln-form__input ln-operator__btn">
+                            <img src="./assets/img/operators/1.svg" alt="Контур.Диадок">
+                            <p>Контур.Диадок</p>
+                        </button>
+                        <ul class="ln-operator__list" id="ln-operators-list">
+                            <li class="ln-operator__item">
+                                <img src="./assets/img/operators/1.svg" alt="Контур.Диадок">
+                                <p>Контур.Диадок</p>
+                            </li>
+                            <li class="ln-operator__item">
+                                <img src="./assets/img/operators/2.svg" alt="Такском">
+                                <p>Такском</p>
+                            </li>
+                            <li class="ln-operator__item">
+                                <img src="./assets/img/operators/3.svg" alt="СберКорус">
+                                <p>СберКорус</p>
+                            </li>
+                            <li class="ln-operator__item">
+                                <img src="./assets/img/operators/4.svg" alt="Эдисофт">
+                                <p>Эдисофт</p>
+                            </li>
+                            <li class="ln-operator__item">
+                                <img src="./assets/img/operators/5.svg" alt="Тензор">
+                                <p>Тензор</p>
+                            </li>
+                            <li class="ln-operator__item">
+                                <img src="./assets/img/operators/1.svg" alt="Контур.Диадок">
+                                <p>Контур.Диадок</p>
+                            </li>
+                            <li class="ln-operator__item">
+                                <img src="./assets/img/operators/2.svg" alt="Такском">
+                                <p>Такском</p>
+                            </li>
+                            <li class="ln-operator__item">
+                                <img src="./assets/img/operators/3.svg" alt="СберКорус">
+                                <p>СберКорус</p>
+                            </li>
+                            <li class="ln-operator__item">
+                                <img src="./assets/img/operators/4.svg" alt="Эдисофт">
+                                <p>Эдисофт</p>
+                            </li>
+                            <li class="ln-operator__item">
+                                <img src="./assets/img/operators/5.svg" alt="Тензор">
+                                <p>Тензор</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="ln-form__notice">Вы уже используете</p>
+                </div>
+            </div>
+            <div class="ln-form__row ln-form__row--border">
+                <div class="ln-form__block">
+                    <p class="ln-form__label">Способ получения закрывающих документов</p>
+                    <div class="ln-form__flex">
+                        <label class="ln-form__receiving ln-receiving" for="ln-edo">
+                            <div class="ln-receiving__block">
+                                <img src="./assets/img/edo.svg" alt="edo">
+                                <span class="ln-receiving__text">Эдо</span>
+                            </div>
+                            <input type="radio" id="ln-edo" name="receiving" value="edo">
+                            <span class="ln-receiving__checkmark">
+                                <svg width="16" height="16" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.617 0.666992C15.442 0.666992 17.3332 2.65012 17.3332 5.60012V12.4095C17.3332 15.3501 15.442 17.3332 12.617 17.3332H5.39199C2.56699 17.3332 0.666992 15.3501 0.666992 12.4095V5.60012C0.666992 2.65012 2.56699 0.666992 5.39199 0.666992H12.617ZM12.4832 6.50012C12.3457 6.36405 12.1601 6.28773 11.9667 6.28773C11.7732 6.28773 11.5876 6.36405 11.4501 6.50012L8.00824 9.94199L6.55012 8.48324C6.26699 8.20012 5.80012 8.20012 5.51699 8.48324C5.23387 8.76637 5.23324 9.22512 5.51699 9.51699L7.50012 11.492C7.64199 11.6332 7.82512 11.7001 8.00824 11.7001C8.20012 11.7001 8.38324 11.6332 8.52512 11.492L12.4832 7.53324C12.6193 7.39575 12.6956 7.21012 12.6956 7.01668C12.6956 6.82324 12.6193 6.63761 12.4832 6.50012Z"
+                                        fill="#0FBE89" />
+                                </svg>
+                            </span>
+                        </label>
+                        <label class="ln-form__receiving ln-receiving" for="ln-pochta">
+                            <div class="ln-receiving__block">
+                                <img src="./assets/img/pochta.svg" alt="pochta">
+                                <span class="ln-receiving__text">Почта</span>
+                            </div>
+                            <input type="radio" id="ln-pochta" name="receiving" value="pochta">
+                            <span class="ln-receiving__checkmark">
+                                <svg width="16" height="16" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.617 0.666992C15.442 0.666992 17.3332 2.65012 17.3332 5.60012V12.4095C17.3332 15.3501 15.442 17.3332 12.617 17.3332H5.39199C2.56699 17.3332 0.666992 15.3501 0.666992 12.4095V5.60012C0.666992 2.65012 2.56699 0.666992 5.39199 0.666992H12.617ZM12.4832 6.50012C12.3457 6.36405 12.1601 6.28773 11.9667 6.28773C11.7732 6.28773 11.5876 6.36405 11.4501 6.50012L8.00824 9.94199L6.55012 8.48324C6.26699 8.20012 5.80012 8.20012 5.51699 8.48324C5.23387 8.76637 5.23324 9.22512 5.51699 9.51699L7.50012 11.492C7.64199 11.6332 7.82512 11.7001 8.00824 11.7001C8.20012 11.7001 8.38324 11.6332 8.52512 11.492L12.4832 7.53324C12.6193 7.39575 12.6956 7.21012 12.6956 7.01668C12.6956 6.82324 12.6193 6.63761 12.4832 6.50012Z"
+                                        fill="#0FBE89" />
+                                </svg>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="ln-form__block">
+                    <label class="ln-form__label" for="ln-address">Отправить почтой по адресу</label>
+                    <div class="ln-form__address">
+                        <input class="ln-form__input" id="ln-address" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="ln-form__total ln-total">
+                <div class="ln-total__column">
+                    <div class="ln-total__flex ln-total__flex--bottom">
+                        <p class="ln-total__all">Всего к оплате :</p>
+                        <p class="ln-total__ruble"><span class="ln-total__all">1.00</span>₽</p>
+                    </div>
+                    <div class="ln-total__flex">
+                        <p class="ln-total__nds">В том числе НДС:</p>
+                        <p class="ln-total__nds"><span>0.17</span> ₽</p>
+                    </div>
+                </div>
+                <button class="ln-btn ln-form__submit">Отправить счет в банк-клиент</button>
+            </div>
+        </div>
+        <div class="ln-form__sended ln-sended">
+            <div class="ln-sended__top">
+                <div class="ln-sended__content">
+                    <h4 class="ln-sended__caption">
+                        Счет отправлен
+                    </h4>
+                    <ul class="ln-sended__list">
+                        <li class="ln-sended__item">
+                            Мы отправили счёт в банк-клиент
+                        </li>
+                        <li class="ln-sended__item">
+                            Нажмите «Перейти в банк-клиент», чтобы автоматически создать платёжное поручение, или
+                            перешлите ссылку на оплату в бухгалтерию
+                        </li>
+                        <li class="ln-sended__item">
+                            После отправки платежа вернитесь в данное окно и дождитесь подтверждения оплаты от системы.
+                            Это может занять 10-15 минут
+                        </li>
+                    </ul>
+                </div>
+                <div class="ln-sended__imgBlock">
+                    <img class="ln-sended__img" src="./assets/img/sended-clock.svg" alt="clock">
+                    <p class="ln-sended__timer">00 : 14 : 59</p>
+                </div>
+                <h4 class="ln-sended__caption ln-sended__caption--mobile">
+                    Счет отправлен
+                </h4>
+            </div>
+            <div class="ln-sended__bottom">
+                <button class="ln-sended__btn ln-sended__accounting">Отправить в бухгалтерию</button>
+                <button class="ln-sended__btn ln-sended__bank">
+                    <img src="./assets/img/res-sberbank.svg" alt="sberbank">
+                    <span>Перейти в банк-клиент</span>
+                </button>
+            </div>
+        </div>
+        <button class="ln-form__showMore">
+            <p>Показать (товары, работы, услуги)</p>
+            <img src="./assets/img/dropdown.svg" alt="dropdown">
+        </button>
+    </form>
+    <script src=" ./js/ln-form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html', {
+"title": "Главная"
+})
+
+<body>
+    @@include('html/header.html', {})
+    <main>
+        <section class="stock">
+            <div class="stock__swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img loading="lazy" src="@img/main/stock-2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" src="@img/main/stock-2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" src="@img/main/stock-2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" src="@img/main/stock-2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img loading="lazy" src="@img/main/stock-2.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="information">
+            <div class="information__container container">
+                <div class="information__block information__block--1">
+                    <h3 class="information__title">Адреса магазинов</h3>
+                    <p class="information__descr">Найдите ближайший салон или
+                        удобный для вас пункт самовывоза</p>
+                    <button class="information__btn">Показать на карте</button>
+                </div>
+                <div class="information__center">
+                    <div class="information__content">
+                        <h3 class="information__caption">
+                            Забота о здоровье детского сна
+                        </h3>
+                        <div class="information__sale">
+                            <span class="information__number">10</span>
+                            <p class="information__about">
+                                %
+                                Дополнительная
+                                скидка
+                            </p>
+                        </div>
+                        <button class="information__order">Заказать</button>
+                    </div>
+                    <img src="@img/main/information-2.png" alt="information">
+                </div>
+                <div class="information__block information__block--2">
+                    <h3 class="information__title">Подбор матрасов</h3>
+                    <p class="information__descr">Найдите ближайший салон или
+                        удобный для вас пункт самовывоза
+                    </p>
+                    <button class="information__btn">Подобрать матрас</button>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <div class="features__container container">
+                <h2 class="features__title">Askona заряжает сном</h2>
+                <p class="features__descr">
+                    Мы постоянно разрабатываем инновационные решения и выпускаем только такую
+                    продукцию, в которой
+                    уверены на 100%. День за днём мы работаем для того , чтобы каждую ночь вы погружались в здоровый
+                    сон,
+                    набираясь сил для новых свершений
+                </p>
+                <ul class="features__list">
+                    <li class="features__item">
+                        <img src="@img/main/features-1.svg" alt="labarotory">
+                        <h3 class="features__caption">Единственная в России лаборатория сна</h3>
+                        <p class="features__text">Сертифицированная по стандартам ISO. В ней мы
+                            создаем будущее. И
+                            тестируем все новые модели матрасов, диванов и кроватей Askona.</p>
+                    </li>
+                    <li class="features__item">
+                        <img src="@img/main/features-2.svg" alt="mark">
+                        <h3 class="features__caption">Марка № 1 в России</h3>
+                        <p class="features__text">По результатам народного голосования. Мы прошли
+                            стажировку в лучших
+                            немецких и шведских компаниях, чтобы перенять стандарты качества и поднять их на ещё более
+                            высокий уровень.</p>
+                    </li>
+                    <li class="features__item">
+                        <img src="@img/main/features-3.svg" alt="eco">
+                        <h3 class="features__caption">Забота об окружающей среде</h3>
+                        <p class="features__text">Мы максимально бережно взаимодействуем с
+                            природой, обеспечивая её
+                            сохранность. Доля перерабатываемых отходов в Askona составляет 100%.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="features features--dark">
+            <div class="features__container container">
+                <h2 class="features__title">Всегда на связи</h2>
+                <p class="features__descr">
+                    Мы постоянно разрабатываем инновационные решения и выпускаем только такую продукцию, в которой
+                    уверены на 100%. День за днём мы работаем для того , чтобы каждую ночь вы погружались в здоровый
+                    сон,
+                    набираясь сил для новых свершений
+                </p>
+                <ul class="features__list">
+                    <li class="features__item">
+                        <img src="@img/main/features-4.svg" alt="connect">
+                        <h3 class="features__caption">Напишите или позвоните нам</h3>
+                        <p class="features__text features__text--small">Консультанты Askona готовы ответить на любой ваш
+                            вопрос в режиме
+                            онлайн.</p>
+                        <a href="#" class="features__link">Задать вопрос</a>
+                    </li>
+                    <li class="features__item">
+                        <img src="@img/main/features-5.svg" alt="consultation" />
+                        <h3 class="features__caption">Получите видеоконсультацию</h3>
+                        <p class="features__text features__text--small">Консультанты Askona покажут вам товар онлайн
+                            и ответят на любые
+                            вопросы.</p>
+                        <a href="#" class="features__link">Позвонить по видео</a>
+                    </li>
+                    <li class="features__item">
+                        <img src="@img/main/features-6.svg" alt="faq">
+                        <h3 class="features__caption">Узнайте ответы на частые вопросы</h3>
+                        <p class="features__text features__text--small">Мы собрали самые популярные вопросы наших
+                            пользователей в одном
+                            удобном разделе.</p>
+                        <a href="#" class="features__link">Открыть раздел</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    @@include('html/footer.html', {})
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

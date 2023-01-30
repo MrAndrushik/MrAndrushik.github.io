@@ -1,7 +1,9 @@
 <header class="header">
     <div class="header__banner banner">
         <div class="banner__container container">
-            <div class="banner__img"></div>
+            <div class="banner__img">
+                <img src="@img/header/banner.png" alt="banner">
+            </div>
             <button class="banner__btn">
                 <img src="@img/header/close-banner.svg" alt="close-banner">
             </button>
@@ -9,27 +11,32 @@
     </div>
     <div class="header__container container">
         <div class="header__top">
+            <button class="header__burger burger header__tablet">
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+                <div class="burger__line"></div>
+            </button>
             <img class="header__logo" src="@img/header/askona_logo.svg" alt="askona">
-            <div class="header__city">
+            <div class="header__city header__desktop">
                 <p class="header__text">Минск</p>
                 <img src="@img/header/dropdown.svg" alt="drop">
             </div>
-            <div class="header__city">
+            <div class="header__magazine header__desktop">
                 <p class="header__text">Магазины:</p>
                 <span class="header__value">30</span>
             </div>
-            <div class="header__searchBlock">
+            <div class="header__searchBlock header__desktop">
                 <input class="header__search" type="text" placeholder="Поиск по товарам...">
             </div>
             <button class="header__callback">
                 <img src="@img/header/phone.svg" alt="phone">
-                <span>Перезвоните мне</span>
+                <span class="header__desktop">Перезвоните мне</span>
             </button>
-            <div class="header__numbersBlock">
+            <div class="header__numbersBlock header__desktop">
                 <span class="header__number">7176</span>
                 <p class="header__all">Показать номера</p>
             </div>
-            <ul class="header__icons">
+            <ul class="header__icons header__desktop">
                 <li>
                     <a class="header__icon" href="#">
                         <img src="@img/header/personal-account.svg" alt="account">
@@ -55,11 +62,11 @@
             </ul>
         </div>
         <div class="header__bottom">
-            <button class="header__menu">
+            <button class="header__menu header__desktop">
                 <img src="@img/header/categories-icon.svg" alt="menu">
                 <span>Все товары</span>
             </button>
-            <nav class="header__nav nav">
+            <nav class="header__nav nav header__desktop">
                 <ul class="nav__list">
                     <li class="nav__item">
                         <a href="#" class="nav__link">Матрасы</a>
@@ -91,6 +98,9 @@
                     </li>
                 </ul>
             </nav>
+            <div class="header__searchBlock header__tablet">
+                <input class="header__search" type="text" placeholder="Поиск по товарам...">
+            </div>
         </div>
     </div>
 </header>

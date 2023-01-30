@@ -2,7 +2,11 @@ export function initializeSwipers() {
     const stockSwiper = new Swiper('.stock__swiper', {
         spaceBetween: 8,
         grabCursor: true,
+        loop: true,
         initialSlide: 1,
+        // autoplay: {
+        //     delay: 5000,
+        // },
         slidesPerView: 'auto',
         pagination: {
             el: '.swiper-pagination',
@@ -28,6 +32,11 @@ export function initializeSwipers() {
             nextEl: '.categories__btn--next',
             prevEl: '.categories__btn--prev',
         },
+        pagination: {
+            el: '.swiper-pagination',
+            bulletClass: 'bullet',
+            bulletActiveClass: 'bullet--active',
+        },
 
         breakpoints: {
             1: {
@@ -36,20 +45,13 @@ export function initializeSwipers() {
                     rows: 2,
                     fill: 'row',
                 },
-                pagination: {
-                    el: '.swiper-pagination',
-                    bulletClass: 'bullet',
-                    bulletActiveClass: 'bullet--active',
-                },
             },
             900: {
-                pagination: false,
+                grid: false,
             },
-            1240: {
-                grid: {
-                    rows: 1,
-                    fill: 'row',
-                },
+            1860: {
+                pagination: false,
+                grid: false,
             },
         },
     });

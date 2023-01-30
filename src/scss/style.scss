@@ -5,7 +5,7 @@
 body {
     font-weight: 400;
     font-family: 'Gilroy', sans-serif;
-    color: #212121;
+    color: #262626;
     background: #fff;
     overflow-x: hidden;
 }
@@ -41,6 +41,7 @@ img {
     font-weight: 600;
     font-size: 36px;
     line-height: 48px;
+    color: #212121;
 
     @media (max-width: 900px) {
         font-weight: 600;
@@ -434,8 +435,12 @@ img {
     height: auto;
     position: relative;
 
+    @media (max-width: 1860px) {
+        padding-bottom: 35px;
+    }
+
     @media (max-width: $xl) {
-        padding: 0 20px;
+        padding: 0 20px 35px;
     }
 
     @media (max-width: 900px) {
@@ -451,7 +456,7 @@ img {
         position: absolute;
         left: 0;
         top: 0;
-        width: 50px;
+        width: 150px;
         height: 100%;
         background: linear-gradient(
             90deg,
@@ -461,6 +466,10 @@ img {
         );
         z-index: 2;
         pointer-events: none;
+
+        @media (max-width: 900px) {
+            width: 50px;
+        }
     }
 
     &::after {
@@ -468,7 +477,7 @@ img {
         position: absolute;
         right: 0;
         top: 0;
-        width: 50px;
+        width: 150px;
         height: 100%;
         background: linear-gradient(
             90deg,
@@ -478,6 +487,10 @@ img {
         );
         z-index: 2;
         pointer-events: none;
+
+        @media (max-width: 900px) {
+            width: 50px;
+        }
     }
 }
 
@@ -495,8 +508,8 @@ img {
     transform: translateY(-50%);
     left: -40px;
 
-    @media (max-width: 1900px) {
-        left: 40px;
+    @media (max-width: 1860px) {
+        display: none;
     }
 }
 
@@ -504,8 +517,8 @@ img {
     right: -40px;
     transform: translateY(-50%) rotate(180deg);
 
-    @media (max-width: 1900px) {
-        right: 40px;
+    @media (max-width: 1860px) {
+        display: none;
     }
 }
 
@@ -526,6 +539,7 @@ img {
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
+    color: #262626;
 
     @media (max-width: 1240px) {
         font-size: 12px;
@@ -741,6 +755,7 @@ img {
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
+    color: #262626;
 
     @media (max-width: 900px) {
         font-size: 14px;
@@ -935,6 +950,7 @@ img {
 }
 
 .information__title {
+    color: #000;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
@@ -947,6 +963,7 @@ img {
 }
 
 .information__descr {
+    color: #000;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -1173,6 +1190,7 @@ img {
 }
 
 .features__caption {
+    color: #212121;
     margin-top: 24px;
     margin-bottom: 8px;
     font-weight: 500;
@@ -1431,6 +1449,7 @@ img {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
+    color: #000;
 
     @media (max-width: 900px) {
         font-size: 16px;

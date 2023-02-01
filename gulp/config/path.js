@@ -14,10 +14,10 @@ export const path = {
         files: `${buildFolder}/files/`,
     },
     src: {
-        js: `${srcFolder}/js/app.js`,
+        js: [`${srcFolder}/js/app.js`, `${srcFolder}/js/main.js`],
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
         svg: `${srcFolder}/img/**/*.svg`,
-        scss: `${srcFolder}/scss/style.scss`,
+        scss: `${srcFolder}/scss/*.scss`,
         html: `${srcFolder}/*.html`,
         fonts: `${srcFolder}/fonts/**.{ttf,woff,woff2}`,
         files: `${srcFolder}/files/**/*.*`,

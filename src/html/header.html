@@ -1,106 +1,885 @@
 <header class="header">
-    <div class="header__banner banner">
-        <div class="banner__container container">
-            <div class="banner__img">
-                <img src="@img/header/banner.png" alt="banner">
+    <div class="header__wrapper">
+        <div class="header__banner banner">
+            <div class="banner__container container">
+                <div class="banner__img">
+                    <img src="@img/header/banner.png" alt="banner">
+                </div>
+                <button class="banner__btn">
+                    <img src="@img/header/close-banner.svg" alt="close-banner">
+                </button>
             </div>
-            <button class="banner__btn">
-                <img src="@img/header/close-banner.svg" alt="close-banner">
-            </button>
         </div>
-    </div>
-    <div class="header__container container">
-        <div class="header__top">
-            <button class="header__burger burger header__tablet">
-                <div class="burger__line"></div>
-                <div class="burger__line"></div>
-                <div class="burger__line"></div>
-            </button>
-            <img class="header__logo" src="@img/header/askona_logo.svg" alt="askona">
-            <div class="header__city header__desktop">
-                <p class="header__text">Минск</p>
-                <img src="@img/header/dropdown.svg" alt="drop">
-            </div>
-            <div class="header__magazine header__desktop">
-                <p class="header__text">Магазины:</p>
-                <span class="header__value">30</span>
-            </div>
-            <div class="header__searchBlock header__desktop">
-                <input class="header__search" type="text" placeholder="Поиск по товарам...">
-            </div>
-            <button class="header__callback">
-                <img src="@img/header/phone.svg" alt="phone">
-                <span class="header__desktop">Перезвоните мне</span>
-            </button>
-            <div class="header__numbersBlock header__desktop">
-                <span class="header__number">7176</span>
-                <p class="header__all">Показать номера</p>
-            </div>
-            <ul class="header__icons header__desktop">
-                <li>
-                    <a class="header__icon" href="#">
-                        <img src="@img/header/personal-account.svg" alt="account">
-                    </a>
-                </li>
-                <li>
-                    <a class="header__icon" href="#">
-                        <img src="@img/header/comparison.svg" alt="comparison">
-                    </a>
-                </li>
-                <li>
-                    <a class="header__icon" href="#">
-                        <img src="@img/header/Favourites.svg" alt="Favourites">
-                        <div class="header__counter">10</div>
-                    </a>
-                </li>
-                <li>
-                    <a class="header__icon" href="#">
-                        <img src="@img/header/Basket.svg" alt="Basket">
-                        <div class="header__counter">199</div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="header__bottom">
-            <button class="header__menu header__desktop">
-                <img src="@img/header/categories-icon.svg" alt="menu">
-                <span>Все товары</span>
-            </button>
-            <nav class="header__nav nav header__desktop">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Матрасы</a>
+        <div class="header__container container">
+            <div class="header__top">
+                <button class="header__menuBtn header__burger burger header__tablet">
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                    <div class="burger__line"></div>
+                </button>
+                <img class="header__logo" src="@img/header/askona_logo.svg" alt="askona">
+                <div class="header__country country">
+                    <select class="country__select" id="header-country" name="contry" autocomplete="off"></select>
+                </div>
+                <div class="header__city header__desktop">
+                    <p class="header__text">Минск</p>
+                    <img src="@img/header/dropdown.svg" alt="drop">
+                </div>
+                <div class="header__magazine header__desktop">
+                    <p class="header__text">Магазины:</p>
+                    <span class="header__value">30</span>
+                </div>
+                <div class="header__searchBlock header__desktop">
+                    <input class="header__search" type="text" placeholder="Поиск по товарам...">
+                </div>
+                <button class="header__callback">
+                    <img class="header__callbackImg" src="@img/header/phone.svg" alt="phone">
+                    <span class="header__desktop">Перезвоните мне</span>
+                </button>
+                <div class="header__numbersBlock header__desktop">
+                    <span class="header__number">7176</span>
+                    <button class="header__all">Показать номера</button>
+                </div>
+                <ul class="header__icons header__desktop">
+                    <li>
+                        <a class="header__icon" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 9.70754C10.9595 9.70754 11.8974 9.42288 12.6952 8.88954C13.493 8.3562 14.1148 7.59814 14.482 6.71123C14.8492 5.82432 14.9453 4.84839 14.7581 3.90685C14.5709 2.96531 14.1088 2.10045 13.4304 1.42164C12.7519 0.742827 11.8875 0.28055 10.9464 0.0932661C10.0054 -0.0940178 9.02995 0.00210296 8.14349 0.369473C7.25704 0.736844 6.49937 1.35896 5.96631 2.15716C5.43324 2.95536 5.14872 3.89379 5.14872 4.85377C5.15143 6.14024 5.66341 7.37324 6.57262 8.28291C7.48182 9.19258 8.71419 9.70483 10 9.70754ZM10 1.49821C10.6552 1.49821 11.2957 1.6926 11.8405 2.0568C12.3853 2.42101 12.8099 2.93866 13.0606 3.54431C13.3114 4.14996 13.377 4.8164 13.2492 5.45936C13.1213 6.10231 12.8058 6.6929 12.3425 7.15645C11.8792 7.61999 11.2889 7.93567 10.6463 8.06356C10.0037 8.19145 9.33758 8.12581 8.73224 7.87494C8.1269 7.62407 7.60951 7.19924 7.24549 6.65418C6.88147 6.10911 6.68718 5.46828 6.68718 4.81273C6.70061 3.94164 7.05524 3.11062 7.67478 2.49844C8.29431 1.88626 9.12926 1.54184 10 1.53925V1.49821Z"
+                                    fill="#231F20" />
+                                <path
+                                    d="M10 11.2878C5.08718 11.2878 0 13.4941 0 17.178V18.2042C0 18.6805 0.189102 19.1372 0.525706 19.474C0.862309 19.8108 1.31884 20 1.79487 20H18.2051C18.6812 20 19.1377 19.8108 19.4743 19.474C19.8109 19.1372 20 18.6805 20 18.2042V17.178C20 13.4633 14.9231 11.2878 10 11.2878ZM18.4615 18.2042C18.4615 18.2722 18.4345 18.3375 18.3864 18.3856C18.3384 18.4337 18.2731 18.4607 18.2051 18.4607H1.79487C1.72687 18.4607 1.66165 18.4337 1.61356 18.3856C1.56548 18.3375 1.53846 18.2722 1.53846 18.2042V17.178C1.53846 14.5818 5.91795 12.8271 10 12.8271C14.0821 12.8271 18.4615 14.5818 18.4615 17.178V18.2042Z"
+                                    fill="#231F20" />
+                            </svg>
+                        </a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Подушки</a>
+                    <li>
+                        <a class="header__icon" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.92315 20C6.82175 20.0014 6.72112 19.9823 6.62717 19.9442C6.53322 19.906 6.44785 19.8493 6.37615 19.7776C6.30444 19.7059 6.24786 19.6207 6.20969 19.5267C6.17152 19.4328 6.15254 19.3322 6.15392 19.2308V11.0256C6.15392 10.8216 6.23496 10.6258 6.37921 10.4815C6.52347 10.3373 6.71913 10.2564 6.92315 10.2564C7.12716 10.2564 7.32282 10.3373 7.46708 10.4815C7.61134 10.6258 7.69238 10.8216 7.69238 11.0256V19.2308C7.69238 19.4348 7.61134 19.6304 7.46708 19.7746C7.32282 19.9189 7.12716 20 6.92315 20Z"
+                                    fill="#231F20" />
+                                <path
+                                    d="M19.2308 20C19.1294 20.0014 19.0288 19.9823 18.9349 19.9442C18.8409 19.906 18.7555 19.8493 18.6838 19.7776C18.6121 19.7059 18.5556 19.6207 18.5174 19.5267C18.4792 19.4328 18.4602 19.3322 18.4616 19.2308V5.89744C18.4616 5.69342 18.5426 5.49757 18.6869 5.35332C18.8312 5.20906 19.0268 5.12821 19.2308 5.12821C19.4349 5.12821 19.6305 5.20906 19.7748 5.35332C19.919 5.49757 20.0001 5.69342 20.0001 5.89744V19.2308C20.0001 19.4348 19.919 19.6304 19.7748 19.7746C19.6305 19.9189 19.4349 20 19.2308 20Z"
+                                    fill="#231F20" />
+                                <path
+                                    d="M13.077 20C12.9756 20.0014 12.875 19.9823 12.781 19.9442C12.6871 19.906 12.6017 19.8494 12.53 19.7776C12.4583 19.7059 12.4017 19.6207 12.3635 19.5267C12.3254 19.4328 12.3064 19.3322 12.3078 19.2308V0.769231C12.3078 0.565218 12.3888 0.369369 12.5331 0.22511C12.6773 0.0808514 12.873 0 13.077 0C13.281 0 13.4767 0.0808514 13.6209 0.22511C13.7652 0.369369 13.8462 0.565218 13.8462 0.769231V19.2308C13.8462 19.4348 13.7652 19.6304 13.6209 19.7746C13.4767 19.9189 13.281 20 13.077 20Z"
+                                    fill="#231F20" />
+                                <path
+                                    d="M0.769301 20C0.667902 20.0014 0.567278 19.9823 0.473327 19.9442C0.379377 19.906 0.294007 19.8493 0.222301 19.7776C0.150594 19.7059 0.0940158 19.6207 0.0558469 19.5267C0.017678 19.4328 -0.00130962 19.3322 7.01493e-05 19.2308V5.89744C7.01493e-05 5.69342 0.0811094 5.49757 0.225368 5.35332C0.369627 5.20906 0.565288 5.12821 0.769301 5.12821C0.973314 5.12821 1.16898 5.20906 1.31323 5.35332C1.45749 5.49757 1.53853 5.69342 1.53853 5.89744V19.2308C1.53853 19.4348 1.45749 19.6304 1.31323 19.7746C1.16898 19.9189 0.973314 20 0.769301 20Z"
+                                    fill="#231F20" />
+                            </svg>
+                        </a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Кровати</a>
+                    <li>
+                        <a class="header__icon" href="#">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20 6.68605C20 3.45643 17.4974 0.000536141 13.7846 0.000536141C12.3887 -0.0173342 11.0373 0.493162 10 1.43021C8.95959 0.491617 7.60444 -0.0189168 6.20513 0.000536141C2.49231 0.000536141 0 3.45643 0 6.68605C0 12.3019 7.67179 17.064 9.58974 17.8663C9.71193 17.9472 9.85371 17.9934 10 18C10.1398 17.9928 10.2749 17.9465 10.3897 17.8663C12.3282 17.064 20 12.3019 20 6.68605ZM10 16.3749C8.33846 15.5418 1.53846 11.3042 1.53846 6.68605C1.53846 4.20727 3.41538 1.54335 6.20513 1.54335C6.81728 1.53599 7.42332 1.66611 7.97881 1.92417C8.5343 2.18223 9.02515 2.56169 9.41539 3.03473L9.53846 3.10673L9.62051 3.15816C9.71605 3.19342 9.8163 3.21422 9.91795 3.21987C10.0163 3.21413 10.1131 3.19331 10.2051 3.15816L10.2872 3.10673C10.3315 3.08898 10.373 3.06471 10.4103 3.03473H10.4615C10.8517 2.56493 11.3413 2.18823 11.8949 1.93203C12.4484 1.67583 13.0519 1.54656 13.6615 1.55363C16.4615 1.55363 18.3385 4.21755 18.3385 6.69634C18.4615 11.3042 11.6513 15.5418 10 16.3749Z"
+                                    fill="#231F20" />
+                            </svg>
+                            <div class="header__counter">10</div>
+                        </a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Одеяла</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Диваны</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Детские товары</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Мебель</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Для дома</a>
-                    </li>
-                    <li class="nav__item nav__item--sale">
-                        <img src="@img/header/sale.svg" alt="sale">
-                        <a href="#" class="nav__link nav__link--sale">Акции</a>
+                    <li>
+                        <a class="header__icon header__basket" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.5343 4.04627C19.3466 3.82163 19.1123 3.64016 18.8475 3.51435C18.5828 3.38853 18.2938 3.32135 18.0004 3.31742H4.43916L3.83982 0.614595C3.83422 0.591305 3.83422 0.567024 3.83982 0.543735C3.82037 0.491249 3.79659 0.440461 3.76872 0.391891C3.7442 0.344198 3.71346 0.299949 3.67729 0.260294C3.6451 0.221392 3.60747 0.1873 3.56555 0.159064C3.52244 0.119701 3.47468 0.0857083 3.42334 0.0578348L3.29128 0.0072209C3.23412 -0.00240697 3.17575 -0.00240697 3.11859 0.0072209H0.843136C0.619522 0.0072209 0.405067 0.0957418 0.246949 0.25331C0.0888299 0.410879 0 0.624588 0 0.847424C0 1.07026 0.0888299 1.28397 0.246949 1.44154C0.405067 1.59911 0.619522 1.68763 0.843136 1.68763H2.3364L2.93574 4.39045L4.9166 13.5922C5.03693 14.0198 5.29503 14.3962 5.65114 14.6633C6.00726 14.9303 6.44162 15.0733 6.8873 15.0701H16.3548C16.804 15.0687 17.2393 14.9144 17.5885 14.6327C17.9377 14.351 18.1798 13.9589 18.2747 13.5213L19.9712 5.67606C20.0202 5.38908 20.0066 5.09493 19.9312 4.81367C19.8558 4.53241 19.7205 4.27066 19.5343 4.04627ZM16.5884 13.1569C16.5747 13.2194 16.5401 13.2755 16.4903 13.3159C16.4405 13.3564 16.3784 13.3788 16.3142 13.3796H6.8873C6.82256 13.3807 6.75951 13.359 6.70932 13.3182C6.65912 13.2775 6.62501 13.2203 6.61303 13.1569L4.85565 5.00794H18.0614C18.104 5.00636 18.1463 5.01468 18.1851 5.03225C18.2239 5.04982 18.2581 5.07616 18.2849 5.10917C18.3111 5.14127 18.3294 5.17908 18.3382 5.21953C18.3471 5.25999 18.3462 5.30195 18.3357 5.342L16.5884 13.1569Z"
+                                    fill="#231F20" />
+                                <path
+                                    d="M16.7002 17.4794C16.3626 17.4783 16.038 17.6091 15.7961 17.8438C15.5631 18.0824 15.432 18.4017 15.4304 18.7346C15.4304 19.0702 15.5642 19.3921 15.8023 19.6294C16.0404 19.8667 16.3634 20 16.7002 20C17.0352 19.9973 17.3556 19.8628 17.5915 19.6258C17.8274 19.3888 17.9598 19.0685 17.9598 18.7346C17.9598 18.5698 17.9272 18.4066 17.8639 18.2543C17.8006 18.102 17.7078 17.9636 17.5909 17.847C17.4739 17.7305 17.3351 17.638 17.1822 17.5749C17.0294 17.5119 16.8656 17.4794 16.7002 17.4794Z"
+                                    fill="#231F20" />
+                                <path
+                                    d="M7.0092 17.4794C6.67469 17.4788 6.35345 17.6097 6.11528 17.8438C5.99759 17.9603 5.90458 18.0992 5.84176 18.2523C5.77894 18.4053 5.74759 18.5693 5.74958 18.7346C5.74957 19.0685 5.88195 19.3888 6.11789 19.6258C6.35383 19.8628 6.6742 19.9973 7.0092 20C7.34597 20 7.66894 19.8667 7.90707 19.6294C8.14521 19.3921 8.27899 19.0702 8.27899 18.7346C8.27899 18.5689 8.24608 18.4049 8.18214 18.2519C8.11821 18.099 8.02451 17.9601 7.90647 17.8434C7.78842 17.7268 7.64836 17.6345 7.49436 17.572C7.34036 17.5095 7.17547 17.4781 7.0092 17.4794Z"
+                                    fill="#231F20" />
+                            </svg>
+
+                            <div class="header__counter">199</div>
+                        </a>
                     </li>
                 </ul>
-            </nav>
-            <div class="header__searchBlock header__tablet">
-                <input class="header__search" type="text" placeholder="Поиск по товарам...">
+            </div>
+            <div class="header__bottom">
+                <button class="header__menuBtn header__menuBtnDesktop header__desktop">
+                    <img src="@img/header/categories-icon.svg" alt="menu">
+                    <span>Все товары</span>
+                </button>
+                <nav class="header__nav nav header__desktop">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Матрасы</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Подушки</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Кровати</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Одеяла</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Диваны</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Детские товары</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Мебель</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Для дома</a>
+                        </li>
+                        <li class="nav__item nav__item--sale">
+                            <img src="@img/header/sale.svg" alt="sale">
+                            <a href="#" class="nav__link nav__link--sale">Акции</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__searchBlock header__tablet">
+                    <input class="header__search" type="text" placeholder="Поиск по товарам...">
+                </div>
+                <button class="header__geo">
+                    <img src="@img/header/geo.svg" alt="geo">
+                    <p class="header__cityMobile">Ваш город: <span class="header__cityMobileValue">Минск</span></p>
+                </button>
             </div>
         </div>
     </div>
 </header>
+<div class="overlay"></div>
+<div class="menu">
+    <div class="menu__container">
+        <aside class="menu__sidebar">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <button data-menu-type="menu-matras" class="menu__tag menu__tag--selected">
+                        <img class="menu__icon" src="@img/main/matras.png" alt="matras">
+                        <span class="menu__type">Матрасы</span>
+                    </button>
+                </li>
+                <li class="menu__item">
+                    <button data-menu-type="menu-podushki" class="menu__tag">
+                        <img class="menu__icon" src="@img/main/podushki.png" alt="podushki">
+                        <span class="menu__type">Подушки</span>
+                    </button>
+                </li>
+                <li class="menu__item">
+                    <button class="menu__tag">
+                        <img class="menu__icon" src="@img/main/krovati.png" alt="krovati">
+                        <span class="menu__type">Кровати</span>
+                    </button>
+                </li>
+                <li class="menu__item">
+                    <button class="menu__tag">
+                        <img class="menu__icon" src="@img/main/odeyala.png" alt="odeyala">
+                        <span class="menu__type">Одеяла</span>
+                    </button>
+                </li>
+                <li class="menu__item">
+                    <button class="menu__tag">
+                        <img class="menu__icon" src="@img/main/divani.png" alt="divani">
+                        <span class="menu__type">Диваны</span>
+                    </button>
+                </li>
+                <li class="menu__item">
+                    <button class="menu__tag">
+                        <img class="menu__icon" src="@img/main/mebel.png" alt="mebel">
+                        <span class="menu__type">Мебель</span>
+                    </button>
+                </li>
+                <li class="menu__item">
+                    <button class="menu__tag">
+                        <img class="menu__icon" src="@img/main/dlya-doma.png" alt="dlya-doma">
+                        <span class="menu__type">Для дома</span>
+                    </button>
+                </li>
+                <li class="menu__item">
+                    <button class="menu__tag">
+                        <img class="menu__icon" src="@img/main/kresla.png" alt="kresla">
+                        <span class="menu__type">Кресла</span>
+                    </button>
+                </li>
+                <li class="menu__item">
+                    <button class="menu__tag">
+                        <div class="menu__iconBlock">
+                            <img class="menu__icon" src="@img/header/sale.svg" alt="sale">
+                        </div>
+                        <span class="menu__type menu__type--sale">Акции</span>
+                    </button>
+                </li>
+                <li class="menu__item menu__item--mobile">
+                    <button class="menu__tag menu__tag--colored">
+                        <div class="menu__iconBlock">
+                            <img class="menu__icon" src="@img/main/magazine.svg" alt="magazine">
+                        </div>
+                        <span class="menu__type">Магазины</span>
+                    </button>
+                </li>
+                <li class="menu__item menu__item--mobile">
+                    <div class="menu__tag menu__tag--colored">
+                        <div class="menu__iconBlock">
+                            <img class="menu__icon" src="@img/header/phone.svg" alt="phone">
+                        </div>
+                        <div class="header__numbersBlock header__numbersBlock--mobile">
+                            <span class="header__number">7176</span>
+                            <button class="header__all">Показать номера</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="menu__callBlock">
+                <button class="menu__callBtn">
+                    Перезвоните мне
+                </button>
+            </div>
+        </aside>
+        <div class="menu__wrapper">
+            <button class="menu__back">Назад</button>
+            <div data-menu-block="menu-matras" class="menu__block menu__block--selected">
+                <div class="menu__content">
+                    <h3 class="menu__title">Матрасы</h3>
+                    <nav class="menu__nav">
+                        <ul class="menu__sortList">
+                            <li class="menu__sortItem">
+                                <p class="menu__sortValue">По категориям</p>
+                                <ul class="menu__sublist">
+                                    <li class="menu__sublistItem menu__sublistItem--tablet">
+                                        <a class="menu__sublistLink" href="#">
+                                            Все матрасы
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Американские матрасы
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Чехлы на матрас
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Наматрасники
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Детские матрасы
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__sortItem">
+                                <p class="menu__sortValue">Обобенности</p>
+                                <ul class="menu__sublist">
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Двухспальные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Односпальные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Полуторные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Евро
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Ортопедические
+                                        </a>
+                                    </li>
+                                </ul>
+                            <li class="menu__sortItem">
+                                <p class="menu__sortValue">По жесткости</p>
+                                <ul class="menu__sublist">
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Пружинные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Средней жесткости
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Жесткие
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Очень жесткие
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Разносторонней жесткости
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__sortItem">
+                                <p class="menu__sortValue">По размеру</p>
+                                <ul class="menu__sublist">
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            80х200
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            90х200
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            120х200
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            140х200
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            160х200
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            180х200
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            200х200
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__sortItem">
+                                <p class="menu__sortValue">По свойствам</p>
+                                <ul class="menu__sublist">
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Пружинные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Беспружинные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            С независимым пружинным блоком
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__sortItem">
+                                <p class="menu__sortValue">По материалау</p>
+                                <ul class="menu__sublist">
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Латексные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Кокосовые
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            С ортопедической пеной
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Из пены с памятью формы
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="menu__posters">
+                    <div class="menu__posterBlock">
+                        <img class="menu__poster" src="@img/header/poster-1.png" alt="poster-1">
+                    </div>
+                    <div class="menu__posterBlock">
+                        <img class="menu__poster" src="@img/header/poster-2.png" alt="poster-2">
+                    </div>
+                </div>
+            </div>
+            <div data-menu-block="menu-podushki" class="menu__block">
+                <div class="menu__content">
+                    <h3 class="menu__title">Подушки</h3>
+                    <nav class="menu__nav">
+                        <ul class="menu__sortList">
+                            <li class="menu__sortItem">
+                                <p class="menu__sortValue">По категориям</p>
+                                <ul class="menu__sublist">
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Американские матрасы
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Чехлы на матрас
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Наматрасники
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Детские матрасы
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__sortItem">
+                                <p class="menu__sortValue">Обобенности</p>
+                                <ul class="menu__sublist">
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Двухспальные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Односпальные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Полуторные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Евро
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Ортопедические
+                                        </a>
+                                    </li>
+                                </ul>
+                            <li class="menu__sortItem">
+                                <p class="menu__sortValue">По жесткости</p>
+                                <ul class="menu__sublist">
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Пружинные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Средней жесткости
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Жесткие
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Очень жесткие
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Разносторонней жесткости
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__sortItem">
+                                <p class="menu__sortValue">По размеру</p>
+                                <ul class="menu__sublist">
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            80х200
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            90х200
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            120х200
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            140х200
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            160х200
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            180х200
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            200х200
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__sortItem">
+                                <p class="menu__sortValue">По свойствам</p>
+                                <ul class="menu__sublist">
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Пружинные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Беспружинные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            С независимым пружинным блоком
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__sortItem">
+                                <p class="menu__sortValue">По материалау</p>
+                                <ul class="menu__sublist">
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Латексные
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Кокосовые
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            С ортопедической пеной
+                                        </a>
+                                    </li>
+                                    <li class="menu__sublistItem">
+                                        <a class="menu__sublistLink" href="#">
+                                            Из пены с памятью формы
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="menu__posters">
+                    <div class="menu__posterBlock">
+                        <img class="menu__poster" src="@img/header/poster-1.png" alt="poster-1">
+                    </div>
+                    <div class="menu__posterBlock">
+                        <img class="menu__poster" src="@img/header/poster-2.png" alt="poster-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="basket">
+    <div class="basket__wrapper">
+        <div class="basket__top">
+            <p class="basket__title">В корзине <span>2</span> товара</p>
+            <button class="basket__close"><img src="@img/basket/close.svg" alt="close"></button>
+        </div>
+        <div class="basket__container">
+            <ul class="basket__list">
+                <li class="basket__item">
+                    <img class="basket__img" src="@img/card/divan.png" alt="divan">
+                    <div class="basket__content">
+                        <div class="basket__row">
+                            <h3 class="basket__caption">Анатомический матрас
+                                Askona Benefit</h3>
+                            <div class="basket__priceBlock">
+                                <p class="basket__currentPrice"><span class="basket__currentPriceValue">48 900</span>
+                                    BYN
+                                </p>
+                                <p class="basket__oldPrice"><span class="basket__oldPriceValue">97 800</span> BYN</p>
+                            </div>
+                        </div>
+                        <div class="basket__row basket__row--centered">
+                            <div class="basket__actions">
+                                <button class="basket__action">Добавить к сравнению</button>
+                                <button class="basket__action">Удалить</button>
+                            </div>
+                            <div class="basket__qunatityBlock">
+                                <button class="basket__minus"><img src="@img/basket/minus.svg" alt="-"></button>
+                                <div class="basket__quantity">
+                                    1
+                                </div>
+                                <button class="basket__plus"><img src="@img/basket/plus.svg" alt="+"></button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="basket__item">
+                    <img class="basket__img" src="@img/card/divan-1.png" alt="divan">
+                    <div class="basket__content">
+                        <div class="basket__row">
+                            <h3 class="basket__caption">Анатомический матрас
+                                Askona Benefit</h3>
+                            <div class="basket__priceBlock">
+                                <p class="basket__currentPrice"><span class="basket__currentPriceValue">48 900</span>
+                                    BYN
+                                </p>
+                                <p class="basket__oldPrice"><span class="basket__oldPriceValue">97 800</span> BYN</p>
+                            </div>
+                        </div>
+                        <div class="basket__row basket__row--centered">
+                            <div class="basket__actions">
+                                <button class="basket__action">Добавить к сравнению</button>
+                                <button class="basket__action">Удалить</button>
+                            </div>
+                            <div class="basket__qunatityBlock">
+                                <button class="basket__minus"><img src="@img/basket/minus.svg" alt="-"></button>
+                                <div class="basket__quantity">
+                                    1
+                                </div>
+                                <button class="basket__plus"><img src="@img/basket/plus.svg" alt="+"></button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="basket__item">
+                    <img class="basket__img" src="@img/card/divan.png" alt="divan">
+                    <div class="basket__content">
+                        <div class="basket__row">
+                            <h3 class="basket__caption">Анатомический матрас
+                                Askona Benefit</h3>
+                            <div class="basket__priceBlock">
+                                <p class="basket__currentPrice"><span class="basket__currentPriceValue">48 900</span>
+                                    BYN
+                                </p>
+                                <p class="basket__oldPrice"><span class="basket__oldPriceValue">97 800</span> BYN</p>
+                            </div>
+                        </div>
+                        <div class="basket__row basket__row--centered">
+                            <div class="basket__actions">
+                                <button class="basket__action">Добавить к сравнению</button>
+                                <button class="basket__action">Удалить</button>
+                            </div>
+                            <div class="basket__qunatityBlock">
+                                <button class="basket__minus"><img src="@img/basket/minus.svg" alt="-"></button>
+                                <div class="basket__quantity">
+                                    1
+                                </div>
+                                <button class="basket__plus"><img src="@img/basket/plus.svg" alt="+"></button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="basket__totalBlock">
+                <p class="basket__totalTitle">Итого:</p>
+                <span class="basket__totalValue">127 BYN</span>
+            </div>
+            <div class="basket__bonus">
+                <img src="@img/basket/bonus.svg" alt="bonus">
+                <p class="basket__bonusText">Будет начисленно <span class="basket__bonusValue"> + 289</span> за этот
+                    заказ
+                </p>
+            </div>
+            <div class="basket__buttons">
+                <button class="basket__click">Купить в 1 клик</button>
+                <button class="basket__order">Оформить заказ</button>
+            </div>
+        </div>
+        <div class="basket__additional">
+            <p class="basket__additionalTitle">С этим товаром покупают</p>
+            <div class="basket__navBtn">
+                <button class="basket__btn basket__btn--prev">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1018_11056)">
+                            <rect x="32" y="32" width="32" height="32" rx="16" transform="rotate(180 32 32)"
+                                fill="white" />
+                            <path
+                                d="M16 32C19.1645 32 22.2579 31.0616 24.8891 29.3035C27.5203 27.5454 29.5711 25.0465 30.7821 22.1229C31.9931 19.1993 32.3099 15.9822 31.6926 12.8786C31.0752 9.77486 29.5513 6.92394 27.3137 4.6863C25.0761 2.44866 22.2251 0.924804 19.1214 0.307441C16.0177 -0.309923 12.8007 0.00692467 9.87706 1.21793C6.95345 2.42893 4.45459 4.4797 2.69648 7.11088C0.93838 9.74207 -5.89837e-06 12.8355 -5.62172e-06 16C0.0061139 20.2416 1.69379 24.3077 4.69305 27.3069C7.69231 30.3062 11.7584 31.9939 16 32V32ZM16 1.15663C18.9357 1.15663 21.8056 2.02717 24.2465 3.65818C26.6875 5.28919 28.59 7.6074 29.7135 10.3197C30.8369 13.0319 31.1309 16.0165 30.5582 18.8958C29.9854 21.7751 28.5717 24.42 26.4958 26.4958C24.42 28.5717 21.7751 29.9854 18.8958 30.5582C16.0165 31.1309 13.0319 30.837 10.3197 29.7135C7.6074 28.59 5.28919 26.6875 3.65817 24.2465C2.02716 21.8056 1.15662 18.9357 1.15662 16C1.16274 12.0652 2.72857 8.29327 5.51091 5.51092C8.29326 2.72857 12.0652 1.16274 16 1.15663V1.15663Z"
+                                fill="#D8D8D8" />
+                            <path
+                                d="M17.2914 11.0088C17.3792 11.0078 17.4664 11.0251 17.5477 11.0598C17.629 11.0945 17.7028 11.1458 17.7647 11.2108C17.8921 11.3454 17.9636 11.5268 17.9636 11.7157C17.9636 11.9046 17.8921 12.086 17.7647 12.2206L14.6457 15.5025L17.8011 18.7844C17.9285 18.919 18 19.1004 18 19.2893C18 19.4783 17.9285 19.6596 17.8011 19.7942C17.6737 19.9261 17.5014 20.0001 17.3217 20.0001C17.142 20.0001 16.9697 19.9261 16.8423 19.7942L13.2016 16.0074C13.0741 15.8728 13.0026 15.6915 13.0026 15.5025C13.0026 15.3136 13.0741 15.1322 13.2016 14.9976L16.8423 11.2108C16.962 11.0868 17.1225 11.0146 17.2914 11.0088Z"
+                                fill="#00B6C9" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1018_11056">
+                                <rect x="32" y="32" width="32" height="32" rx="16" transform="rotate(180 32 32)"
+                                    fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </button>
+                <button class="basket__btn basket__btn--next">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1018_11056)">
+                            <rect x="32" y="32" width="32" height="32" rx="16" transform="rotate(180 32 32)"
+                                fill="white" />
+                            <path
+                                d="M16 32C19.1645 32 22.2579 31.0616 24.8891 29.3035C27.5203 27.5454 29.5711 25.0465 30.7821 22.1229C31.9931 19.1993 32.3099 15.9822 31.6926 12.8786C31.0752 9.77486 29.5513 6.92394 27.3137 4.6863C25.0761 2.44866 22.2251 0.924804 19.1214 0.307441C16.0177 -0.309923 12.8007 0.00692467 9.87706 1.21793C6.95345 2.42893 4.45459 4.4797 2.69648 7.11088C0.93838 9.74207 -5.89837e-06 12.8355 -5.62172e-06 16C0.0061139 20.2416 1.69379 24.3077 4.69305 27.3069C7.69231 30.3062 11.7584 31.9939 16 32V32ZM16 1.15663C18.9357 1.15663 21.8056 2.02717 24.2465 3.65818C26.6875 5.28919 28.59 7.6074 29.7135 10.3197C30.8369 13.0319 31.1309 16.0165 30.5582 18.8958C29.9854 21.7751 28.5717 24.42 26.4958 26.4958C24.42 28.5717 21.7751 29.9854 18.8958 30.5582C16.0165 31.1309 13.0319 30.837 10.3197 29.7135C7.6074 28.59 5.28919 26.6875 3.65817 24.2465C2.02716 21.8056 1.15662 18.9357 1.15662 16C1.16274 12.0652 2.72857 8.29327 5.51091 5.51092C8.29326 2.72857 12.0652 1.16274 16 1.15663V1.15663Z"
+                                fill="#D8D8D8" />
+                            <path
+                                d="M17.2914 11.0088C17.3792 11.0078 17.4664 11.0251 17.5477 11.0598C17.629 11.0945 17.7028 11.1458 17.7647 11.2108C17.8921 11.3454 17.9636 11.5268 17.9636 11.7157C17.9636 11.9046 17.8921 12.086 17.7647 12.2206L14.6457 15.5025L17.8011 18.7844C17.9285 18.919 18 19.1004 18 19.2893C18 19.4783 17.9285 19.6596 17.8011 19.7942C17.6737 19.9261 17.5014 20.0001 17.3217 20.0001C17.142 20.0001 16.9697 19.9261 16.8423 19.7942L13.2016 16.0074C13.0741 15.8728 13.0026 15.6915 13.0026 15.5025C13.0026 15.3136 13.0741 15.1322 13.2016 14.9976L16.8423 11.2108C16.962 11.0868 17.1225 11.0146 17.2914 11.0088Z"
+                                fill="#00B6C9" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1018_11056">
+                                <rect x="32" y="32" width="32" height="32" rx="16" transform="rotate(180 32 32)"
+                                    fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </button>
+            </div>
+        </div>
+        <div class="basket__swiper swiper">
+            <div class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a class="basket__card card card--small" href="#">
+                        <div class="card__imgBlock">
+                            <img class="card__img" src="@img/card/matras.png" alt="matras">
+
+                        </div>
+                        <div class="card__wrapper">
+                            <div class="card__content">
+                                <h3 class="card__caption">
+                                    Анатомический матрас Askona
+                                    Benefit
+                                </h3>
+                                <p class="card__priceBlock">
+                                    от <span class="card__currentPrice">48 900 BYN </span>
+                                    <span class="card__oldPrice">97 800 BYN</span>
+                                </p>
+                                <ul class="card__colorList">
+                                    <li class="card__color">
+                                        <button class="card__colorBtn">
+                                            <img class="card__colorIcon" src="@img/card/color-1.png" alt="color">
+                                        </button>
+                                    </li>
+                                    <li class="card__color">
+                                        <button class="card__colorBtn">
+                                            <img class="card__colorIcon" src="@img/card/color-2.png" alt="color">
+                                        </button>
+                                    </li>
+                                    <li class="card__color">
+                                        <button class="card__colorBtn">
+                                            <img class="card__colorIcon" src="@img/card/color-3.png" alt="color">
+                                        </button>
+                                    </li>
+                                    <li class="card__color">
+                                        <button class="card__colorBtn">
+                                            <img class="card__colorIcon" src="@img/card/color-4.png" alt="color">
+                                        </button>
+                                    </li>
+                                    <li class="card__color">
+                                        <button class="card__colorBtn">
+                                            <img class="card__colorIcon" src="@img/card/color-5.png" alt="color">
+                                        </button>
+                                    </li>
+                                    <li class="card__color">
+                                        <button class="card__colorBtn">
+                                            <img class="card__colorIcon" src="@img/card/color-6.png" alt="color">
+                                        </button>
+                                    </li>
+                                    <li class="card__colorNumber">
+                                        + 12
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a class="basket__card card card--small" href="#">
+                        <div class="card__imgBlock">
+                            <img class="card__img" src="@img/card/matras.png" alt="matras">
+                            <div class="card__individuals">
+                                <div class="card__sale">-50%</div>
+                                <div class="card__mark">Товар недели</div>
+                            </div>
+                        </div>
+                        <div class="card__wrapper">
+                            <div class="card__content">
+                                <h3 class="card__caption">
+                                    Анатомический матрас Askona
+                                    Benefit
+                                </h3>
+                                <p class="card__priceBlock">
+                                    от <span class="card__currentPrice">48 900 BYN </span>
+                                    <span class="card__oldPrice">97 800 BYN</span>
+                                </p>
+                                <p class="card__installmentBlock">
+                                    Рассрочка от <span class="card__installment">289.5 BYN</span>
+                                </p>
+                                <div class="card__row">
+                                    <div class="card__characteristics">
+                                        <img src="@img/card/height.svg" alt="height">
+                                        <div class="card__characteristic">
+                                            <p class="card__option">Высота</p>
+                                            <p class="card__value">19 см</p>
+                                        </div>
+                                    </div>
+                                    <div class="card__characteristics">
+                                        <img src="@img/card/weight.svg" alt="height">
+                                        <div class="card__characteristic">
+                                            <p class="card__option">Вес на спальное место:</p>
+                                            <p class="card__value">с выше 140 кг</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </div>
+</div>

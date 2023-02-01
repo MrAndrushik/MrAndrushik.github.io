@@ -136,4 +136,14 @@ export function initializeSwipers() {
             clickable: true,
         },
     });
+
+    const basketSwiper = new Swiper('.basket__swiper', {
+        spaceBetween: 32,
+        grabCursor: true,
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: '.basket__btn--next',
+            prevEl: '.basket__btn--prev',
+        },
+    });
 }

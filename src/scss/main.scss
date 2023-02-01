@@ -1,5 +1,9 @@
 @import 'variables';
 
+.main {
+    padding-bottom: 80px;
+}
+
 .container {
     max-width: $xl;
     padding: 0 20px;
@@ -76,6 +80,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    pointer-events: none;
 
     @media (max-width: 900px) {
         gap: 6px;
@@ -134,6 +139,7 @@
     }
 
     &:before {
+        display: none;
         content: '';
         position: absolute;
         left: 0;
@@ -155,6 +161,7 @@
     }
 
     &::after {
+        display: none;
         content: '';
         position: absolute;
         right: 0;
@@ -237,12 +244,12 @@
 }
 
 .productsSlider__container {
-    padding-top: 60px;
+    padding-top: 10px;
 
     position: relative;
 
     @media (max-width: $xl) {
-        padding: 60px 0 0 0;
+        padding: 10px 0 0 0;
     }
 
     @media (max-width: 900px) {
@@ -257,7 +264,7 @@
 .swiper.productsSlider__swiper {
     margin-top: 26px;
     width: 100%;
-    padding: 0 calc((100% - 1720px) / 2) 35px;
+    padding: 0 calc((100% - 1720px) / 2) 75px;
 
     & .swiper-slide {
         width: auto;
@@ -268,6 +275,15 @@
     @media (max-width: $xl) {
         margin-top: 16px;
         padding: 0 20px 35px;
+    }
+}
+
+.productsSlider__pagination {
+    bottom: 50px !important;
+    z-index: unset;
+
+    @media (max-width: $xl) {
+        bottom: 10px !important;
     }
 }
 
@@ -298,8 +314,12 @@
             display: flex;
         }
 
-        .card__btn {
+        .card__btnBlock {
             display: flex;
+
+            @media (max-width: 900px) {
+                display: none;
+            }
         }
 
         @media (max-width: 900px) {
@@ -313,6 +333,10 @@
 .card--small {
     width: 170px;
     border: none;
+
+    &:hover {
+        box-shadow: none;
+    }
 }
 
 .card__icons {
@@ -669,13 +693,31 @@
     width: 100%;
 }
 
-.card__btn {
+.card__btnBlock {
+    position: absolute;
+    width: calc(100% + 2px);
+    left: -1px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-top: 0;
+    box-shadow: 0px 6px 10px rgba(50, 108, 121, 0.14);
     display: none;
-    margin-top: 13px;
+    justify-content: center;
+    padding-bottom: 12px;
+    padding-top: 13px;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+}
+
+.card__btn {
+    z-index: 1;
+    display: flex;
     transition: $transition;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 36px);
     height: 46px;
     color: #fff;
     font-weight: 500;
@@ -686,6 +728,10 @@
 
     &:hover {
         background: #57e1e7;
+    }
+
+    @media (max-width: 900px) {
+        display: none;
     }
 }
 

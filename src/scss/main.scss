@@ -280,7 +280,7 @@
 
 .productsSlider__pagination {
     bottom: 50px !important;
-    z-index: unset;
+    z-index: unset !important;
 
     @media (max-width: $xl) {
         bottom: 10px !important;

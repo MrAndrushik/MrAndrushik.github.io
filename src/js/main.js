@@ -1,3 +1,6 @@
+import { initializeSwipers } from './modules/main/swiper.js';
+import { removeScroll } from './modules/removeScroll.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const select = new TomSelect('#header-country', {
         create: false,
@@ -26,4 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
     select.on('change', () => {
         select.blur();
     });
+    initializeSwipers();
 });

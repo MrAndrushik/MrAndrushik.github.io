@@ -14,20 +14,31 @@ export function initializeSwipers() {
             bulletActiveClass: 'bullet--active',
         },
         breakpoints: {
+            425: {
+                slidesPerView: 2,
+                spaceBetween: 8,
+            },
+            900: {
+                slidesPerView: 3,
+                spaceBetween: 8,
+            },
             1240: {
+                spaceBetween: 8,
+                slidesPerView: 3,
+            },
+            1440: {
                 spaceBetween: 32,
+                slidesPerView: 'auto',
+                slidesPerView: 3,
             },
         },
     });
 
     const categoriesSwiper = new Swiper('.categories__swiper', {
         spaceBetween: 32,
+        loop: true,
         grabCursor: true,
         slidesPerView: 'auto',
-        grid: {
-            rows: 2,
-            fill: 'row',
-        },
         navigation: {
             nextEl: '.categories__btn--next',
             prevEl: '.categories__btn--prev',
@@ -41,24 +52,30 @@ export function initializeSwipers() {
         breakpoints: {
             1: {
                 spaceBetween: 16,
-                grid: {
-                    rows: 2,
-                    fill: 'row',
-                },
+                loop: true,
+                centeredSlides: true,
             },
-            900: {
+            425: {
                 grid: false,
+                loop: true,
+                centeredSlides: true,
+            },
+            1024: {
+                grid: false,
+                loop: true,
+                centerSlides: false,
             },
             1860: {
                 pagination: false,
                 grid: false,
+                loop: true,
             },
         },
     });
 
     const hitsSwiper = new Swiper('.hits__swiper', {
         spaceBetween: 32,
-        slidesPerView: 'auto',
+        loop: true,
         spaceBetween: 20,
         pagination: {
             el: '.swiper-pagination',
@@ -70,8 +87,21 @@ export function initializeSwipers() {
             prevEl: '.hits__btn--prev',
         },
         breakpoints: {
+            1: {
+                slidesPerView: 1,
+            },
+            425: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
             900: {
                 spaceBetween: 32,
+                slidesPerView: 3,
+            },
+            1440: {
+                slidesPerView: 4,
             },
         },
     });
@@ -79,7 +109,7 @@ export function initializeSwipers() {
     const noveltiesSwiper = new Swiper('.novelties__swiper', {
         spaceBetween: 32,
         grabCursor: true,
-        slidesPerView: 'auto',
+        loop: true,
         spaceBetween: 20,
         pagination: {
             el: '.swiper-pagination',
@@ -91,8 +121,22 @@ export function initializeSwipers() {
             prevEl: '.novelties__btn--prev',
         },
         breakpoints: {
+            1: {
+                slidesPerView: 1,
+            },
+            425: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
             900: {
                 spaceBetween: 32,
+                slidesPerView: 3,
+            },
+            1440: {
+                slidesPerView: 4,
             },
         },
     });
@@ -105,6 +149,17 @@ export function initializeSwipers() {
             el: '.swiper-pagination',
             bulletClass: 'bullet',
             bulletActiveClass: 'bullet--active',
+        },
+        breakpoints: {
+            1800: {
+                slidesPerView: 'auto',
+            },
+            1020: {
+                slidesPerView: 3,
+            },
+            900: {
+                slidesPerView: 3,
+            },
         },
     });
 

@@ -1,4 +1,4 @@
-import { initializeSwipers } from './modules/main/swiper.js';
+import { removeScroll } from './modules/removeScroll.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // FOOTER TAGS START
@@ -22,24 +22,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // MENU START
     const menuBtn = document.querySelectorAll('.header__menuBtn');
+    const header = document.querySelector('.header');
     const menuOverlay = document.querySelector('.menu');
     const overlay = document.querySelector('.overlay');
     const allTags = document.querySelectorAll('[data-menu-type]');
     const allMenues = document.querySelectorAll('[data-menu-block]');
     const menuWrapper = document.querySelector('.menu__wrapper');
     const backBtn = document.querySelector('.menu__back');
+
     backBtn.onclick = () => {
         menuWrapper.classList.remove('menu__wrapper--active');
         menuOverlay.classList.remove('non-scrollable');
     };
+
+    // BANNER START
+    const banner = document.querySelector('.banner');
+    const bannerBtn = document.querySelector('.banner__btn');
+    bannerBtn.onclick = () => {
+        banner.remove();
+        menuOverlay.style.top = header.clientHeight + 'px';
+        menuOverlay.style.height = `calc(100vh - ${header.clientHeight}px)`;
+    };
+    // BANNER END
 
     menuBtn.forEach((btn) => {
         btn.onclick = () => {
             document.querySelector('.header__geo').classList.toggle('header__geo--active');
             btn.classList.toggle('header__menuBtn--active');
             menuOverlay.classList.toggle('menu--active');
-            overlay.classList.toggle('overlay--active');
-            document.body.classList.toggle('non-scrollable');
+            // overlay.classList.toggle('overlay--active');
+            menuOverlay.style.top = header.clientHeight + 'px';
+            menuOverlay.style.height = `calc(100vh - ${header.clientHeight}px)`;
+            removeScroll(menuOverlay.classList.contains('menu--active'));
+            // document.body.classList.toggle('non-scrollable');
         };
     });
     allTags.forEach((tag) => {
@@ -61,6 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const basket = document.querySelector('.basket');
     const basketCloseBtn = document.querySelector('.basket__close');
 
+    overlay.onclick = () => {
+        overlay.classList.remove('overlay--active2');
+        basket.classList.remove('basket--active');
+    };
+
     basketBtn.onclick = () => {
         basket.classList.add('basket--active');
         overlay.classList.add('overlay--active2');
@@ -76,9 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const phoneOpener = document.querySelectorAll('.header__all');
     phoneOpener.forEach((btn) => {
         btn.onclick = () => {
-            document
-                .querySelectorAll('.header__number')
-                .forEach((btn) => (btn.innerHTML = '+7 700 836-85-12'));
+            document.querySelectorAll('.header__number').forEach((btn) => {
+                btn.innerHTML = '+7 700 836-85-12';
+                btn.setAttribute('href', 'tel:77008368512');
+            });
             btn.remove();
         };
     });
@@ -97,6 +118,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     // SCROLLBTN END
-
-    initializeSwipers();
 });

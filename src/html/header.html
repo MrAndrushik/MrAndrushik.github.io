@@ -2,8 +2,8 @@
     <div class="header__wrapper">
         <div class="header__banner banner">
             <div class="banner__container container">
-                <div class="banner__img">
-                    <img src="@img/header/banner.png" alt="banner">
+                <div class="banner__imgBlock">
+                    <img class="banner__img" src="@img/header/banner.png" alt="banner">
                 </div>
                 <button class="banner__btn">
                     <img src="@img/header/close-banner.svg" alt="close-banner">
@@ -37,7 +37,7 @@
                     <span class="header__desktop">Перезвоните мне</span>
                 </button>
                 <div class="header__numbersBlock header__desktop">
-                    <span class="header__number">7176</span>
+                    <a class="header__number">7176</a>
                     <button class="header__all">Показать номера</button>
                 </div>
                 <ul class="header__icons header__desktop">
@@ -107,7 +107,7 @@
             <div class="header__bottom">
                 <button class="header__menuBtn header__menuBtnDesktop header__desktop">
                     <img src="@img/header/categories-icon.svg" alt="menu">
-                    <span>Все товары</span>
+                    <span class="header__menuBtnText">Все товары</span>
                 </button>
                 <nav class="header__nav nav header__desktop">
                     <ul class="nav__list">
@@ -648,7 +648,7 @@
                         </div>
                         <div class="basket__row basket__row--centered">
                             <div class="basket__actions">
-                                <button class="basket__action">Добавить к сравнению</button>
+                                <button class="basket__action">Добавить в избранное</button>
                                 <button class="basket__action">Удалить</button>
                             </div>
                             <div class="basket__qunatityBlock">
@@ -782,6 +782,103 @@
         </div>
         <div class="basket__swiper swiper">
             <div class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a class="basket__card card card--small" href="#">
+                        <div class="card__imgBlock">
+                            <img class="card__img" src="@img/card/matras.png" alt="matras">
+
+                        </div>
+                        <div class="card__wrapper">
+                            <div class="card__content">
+                                <h3 class="card__caption">
+                                    Анатомический матрас Askona
+                                    Benefit
+                                </h3>
+                                <p class="card__priceBlock">
+                                    от <span class="card__currentPrice">48 900 BYN </span>
+                                    <span class="card__oldPrice">97 800 BYN</span>
+                                </p>
+                                <ul class="card__colorList">
+                                    <li class="card__color">
+                                        <button class="card__colorBtn">
+                                            <img class="card__colorIcon" src="@img/card/color-1.svg" alt="color">
+                                        </button>
+                                    </li>
+                                    <li class="card__color">
+                                        <button class="card__colorBtn">
+                                            <img class="card__colorIcon" src="@img/card/color-2.svg" alt="color">
+                                        </button>
+                                    </li>
+                                    <li class="card__color">
+                                        <button class="card__colorBtn">
+                                            <img class="card__colorIcon" src="@img/card/color-3.svg" alt="color">
+                                        </button>
+                                    </li>
+                                    <li class="card__color">
+                                        <button class="card__colorBtn">
+                                            <img class="card__colorIcon" src="@img/card/color-4.svg" alt="color">
+                                        </button>
+                                    </li>
+                                    <li class="card__color">
+                                        <button class="card__colorBtn">
+                                            <img class="card__colorIcon" src="@img/card/color-5.svg" alt="color">
+                                        </button>
+                                    </li>
+                                    <li class="card__color">
+                                        <button class="card__colorBtn">
+                                            <img class="card__colorIcon" src="@img/card/color-6.svg" alt="color">
+                                        </button>
+                                    </li>
+                                    <li class="card__colorNumber">
+                                        + 12
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a class="basket__card card card--small" href="#">
+                        <div class="card__imgBlock">
+                            <img class="card__img" src="@img/card/matras.png" alt="matras">
+                            <div class="card__individuals">
+                                <div class="card__sale">-50%</div>
+                                <div class="card__mark">Товар недели</div>
+                            </div>
+                        </div>
+                        <div class="card__wrapper">
+                            <div class="card__content">
+                                <h3 class="card__caption">
+                                    Анатомический матрас Askona
+                                    Benefit
+                                </h3>
+                                <p class="card__priceBlock">
+                                    от <span class="card__currentPrice">48 900 BYN </span>
+                                    <span class="card__oldPrice">97 800 BYN</span>
+                                </p>
+                                <p class="card__installmentBlock">
+                                    Рассрочка от <span class="card__installment">289.5 BYN</span>
+                                </p>
+                                <div class="card__row">
+                                    <div class="card__characteristics">
+                                        <img src="@img/card/height.svg" alt="height">
+                                        <div class="card__characteristic">
+                                            <p class="card__option">Высота</p>
+                                            <p class="card__value">19 см</p>
+                                        </div>
+                                    </div>
+                                    <div class="card__characteristics">
+                                        <img src="@img/card/weight.svg" alt="height">
+                                        <div class="card__characteristic">
+                                            <p class="card__option">Вес на спальное место:</p>
+                                            <p class="card__value">с выше 140 кг</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
                 <li class="swiper-slide">
                     <a class="basket__card card card--small" href="#">
                         <div class="card__imgBlock">
